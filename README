@@ -1,0 +1,26 @@
+The files of interest are noted in this README.
+
+Python: Path planning
+ - Abstracted OccupancyGrid and Spline data structures into separate files
+
+Spline.py - contain implementation of centripetal catmull-rom splines
+
+rrt.py - implementation of rrt algorithm as used in Assignment 2.
+
+jps.py - Jump point search algorithm implemented
+
+path.py - path planning module which is imported during simulation. (uses its own OccupancyGrid to prevent overlaps)
+
+ros : Files required to run simulation (gazebo)
+navigation.py - imports the python files for path planning
+              - Paths are planned once and robot will follow that path (can modify for on-line planning easily)
+              - contains three different controllers (PID, lead, lead-lag)
+              - write tmp files to contain the deviation from the paths, planned path and actual robot path
+
+plotError.py - uses the tmp files written by navigation.py and plot visuals
+
+
+
+matlab : Files used to tune controllers
+pid controller - uses Simulink to tune and matlab to print step response attributes
+lead/lag controller - tune using matlab
