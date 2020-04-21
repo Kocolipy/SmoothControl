@@ -1,0 +1,12 @@
+image: ./standard_map.pgm
+resolution: 0.05000
+origin: [-1.2500000, -1.250000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+#goal: [0.8, 1]
+#goal: [0.845, -0.5331]
+goal: [-0.8, -0.85]
+#start: [-1, -1, 0]
+start: [-1, -1.023, -2.35]
+
